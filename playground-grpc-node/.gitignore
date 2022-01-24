@@ -1,0 +1,39 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+dist
+/certificates
+certificates
+/out-tsc
+/build
+/docker-volumes
+docker-volumes
+
+# dependencies
+/node_modules
+node_modules
+
+# environment variables
+.env
+
+# Webhook handler
+ngrok
+ngrok.log
+
+# Certificate
+localhost.key
+localhost.cert
+
+# IDE
+.vscode
+.idea
+
+# System Files
+.DS_Store
+Thumbs.db
+
+
+
+
+

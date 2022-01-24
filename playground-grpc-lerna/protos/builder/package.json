@@ -1,0 +1,30 @@
+{
+  "name": "@protos/builder",
+  "version": "1.0.0",
+  "description": "Database module for application",
+  "author": "Eric Askari <mohammad.askari@weare.fi>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "src/index.ts",
+  "bin": {
+    "cook": "./bin/index.js"
+  },
+  "scripts": {
+    "build:proto:builder": "tsc",
+    "build:proto:builder:watch": "tsc --watch"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.2.2",
+    "@grpc/proto-loader": "^0.5.5",
+    "@types/google-protobuf": "^3.7.4",
+    "google-protobuf": "^3.14.0",
+    "@types/shelljs": "^0.8.8",
+    "grpc-tools": "^1.10.0",
+    "shelljs": "^0.8.4"
+  },
+  "devDependencies": {
+    "@configuration/eslint": "^1.0.0",
+    "@configuration/prettier": "^1.0.0",
+    "@configuration/tsconfig": "^1.0.0"
+  }
+}

@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package database;
+
+
+message Empty {
+  int32 id = 1;
+
+}
+message Picture {
+  int32 id = 1;
+  string title = 2;
+}
+
+message PictureById {
+  int32 id = 1;
+  string title = 2;
+}
+
+message ImageFile {
+  oneof data {
+    bytes chunk = 2;
+  };
+}
+message MetaData {
+  string name = 1;
+  string type = 2;
+}
+
+message File {
+  bytes content = 1;
+}
+
+message FileDownloadRequest {
+  oneof request {
+    MetaData metadata = 1;
+    File file = 2;
+  }
+}
+service Database {
+  rpc GetPictures(Empty) returns (Picture) {};
+  rpc GetPictureById(PictureById) returns (Picture) {};
+  rpc GetPictureStreamById(Empty) returns(stream FileDownloadRequest);
+}

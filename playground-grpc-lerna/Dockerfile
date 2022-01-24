@@ -1,0 +1,62 @@
+#
+#
+#       SHARED PART
+#
+#
+
+
+
+FROM node:latest as microservice-base
+WORKDIR /app
+RUN npm i lerna -g
+RUN npm i typescript -g
+RUN npm i @grpc/grpc-js -g
+RUN npm i grpc-tools -g
+RUN npm i grpc_tools_node_protoc_ts -g
+RUN npm i ts-node -g
+RUN npm i nodemon -g
+COPY package.json package-lock.json lerna.json ./
+
+FROM microservice-base as microservice-base-with-configuration
+WORKDIR /app
+COPY configurations     ./configurations
+RUN  npm run init
+
+FROM microservice-base-with-configuration as microservice-base-with-protos
+WORKDIR /app
+COPY protos             ./protos
+RUN  npm run init
+RUN  lerna run build:proto:builder
+RUN  lerna run build:proto:module:cook
+RUN  lerna run build:proto:module:publish
+
+#
+#
+#       SEPERATED PART
+#
+#
+
+
+FROM microservice-base-with-protos as microservice-module-database
+WORKDIR /app/modules/database
+
+COPY modules/database/package.json              ./
+COPY modules/database/package-lock.json         ./
+RUN  lerna bootstrap
+
+COPY modules/database             ./
+#ENTRYPOINT ["ts-node"]
+#CMD ["./src/index.ts", "--watch"]
+ENTRYPOINT ["nodemon"]
+CMD ["./src/index.ts", "--delay 50ms", "--exec ts-node", "--watch src"]
+
+
+FROM microservice-base-with-protos as microservice-module-server
+WORKDIR /app/modules/server
+COPY modules/server/package.json              ./
+COPY modules/server/package-lock.json         ./
+RUN  lerna bootstrap
+
+COPY modules/server             ./
+ENTRYPOINT ["nodemon"]
+CMD ["./src/index.ts", "--delay 50ms", "--exec ts-node", "--watch src"]

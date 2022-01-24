@@ -1,0 +1,26 @@
+version: "3.8"
+services:
+#  database:
+#    build:
+#      context: .
+#      dockerfile: Dockerfile
+#      target: microservice-module-database
+#    container_name: ms.database
+#    restart: on-failure
+#    ports:
+#      - 50051:50051
+#    volumes:
+#      - ./modules/database/src:/app/modules/database/src
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: microservice-module-server
+    container_name: ms...server
+    restart: on-failure
+    ports:
+      - 8080:8080
+    volumes:
+      - ./modules/server/src:/app/modules/server/src
+#    depends_on:
+#      - database

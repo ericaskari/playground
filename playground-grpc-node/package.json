@@ -1,0 +1,11 @@
+{
+  "name": "grpc-nodejs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Eric Askari",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "microservices/*"
+  ]
+}
