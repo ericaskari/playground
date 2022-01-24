@@ -1,0 +1,25 @@
+:host{
+  display: block;
+}
+
+
+ng::ng-deep {
+  border: 1px solid red;
+  app-button {
+    padding: 1rem;
+
+    & > button {
+      border: 1px solid red;
+    }
+  }
+}
+
+:host ::ng-deep app-button {
+  border: 1px solid red;
+
+  & > button {
+    border: 1px solid red;
+    padding: 1rem;
+
+  }
+}
