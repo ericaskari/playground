@@ -1,0 +1,137 @@
+.parent {
+    -fx-background-color: #4b5d68;
+
+}
+
+.background{
+    -fx-background-color: #4b5d68 ;
+}
+
+
+.sidebar {
+    -fx-background-color: #4b5d68;
+    -fx-border-color:#4b5d68;
+}
+
+
+.button {
+    -fx-background-color: #ffdfd3;
+    -fx-text-fill: #efecec;
+    -fx-background-radius: 25;
+}
+.button:hover {
+    -fx-background-color: #363434;
+}
+
+.jfx-button {
+    -fx-background-color: #596e79;
+    -fx-text-fill: #596e79;
+    -fx-background-radius: 0;
+    -fx-border-color:transparent transparent transparent #2b353b  ;
+    -fx-border-width:5.0;
+}
+.jfx-button:hover {
+    -fx-background-color: #36424a;
+}
+
+
+.hbox{
+    -fx-background-color: #4b5d68;
+}
+
+
+.text-field {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #b5c2c9;
+    /*-fx-text-fill: #62929a;
+    -fx-prompt-text-fill: #62929a;*/
+}
+.combo-box{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #b5c2c9;
+
+}
+.date-picker{
+    -fx-background-color: transparent;
+    -fx-text-fill: #62929a;
+    -fx-prompt-text-fill: #62929a;
+}
+
+
+
+
+
+.table-view{
+    -fx-background-color:  #4b5d68  ;
+    -fx-text-fill: #efecec;
+    -fx-border-color: #4b5d68  ;
+    -fx-background-radius: 0;
+}
+.table-view .table-column{
+    -fx-text-fill: white;
+
+    -fx-alignment:center;
+}
+.table-view .column-header{
+    -fx-background-color: #4B5D68  ;
+    -fx-background-radius: 0;
+    -fx-text-fill: #efecec;
+}
+.table-view .column-header-background{
+    -fx-background-color:  #36424a;
+    -fx-background-radius: 0;
+    -fx-text-fill: #efecec;
+}
+
+.table-view .column-header-background .label {
+    -fx-background-color:  #4b5d68 ;
+    -fx-text-fill: #efecec;
+    -fx-background-radius: 0;
+
+}
+.table-view .table-cell{
+
+    -fx-text-fill: #efecec;
+    -fx-font-size: 15px;
+    -fx-background-radius: 0;/*the font size you asked in the comments below*/
+    /* -fx-text-fill:orange; */
+
+}
+/*Style for each < non odd> row of table view*/
+.table-row-cell{
+    -fx-background-color: #404f59;
+    -fx-text-fill: #efecec;
+    /*-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;*/
+    /*-fx-padding: 0.0em;*/
+}
+
+/*Style for each <odd> row of table view*/
+.table-row-cell:odd{
+    -fx-background-color: #566a76;
+    -fx-text-fill: #efecec;
+    /*-fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em;*/
+}
+
+
+/*Style of each entire row in the table view*/
+  .table-row-cell:selected {
+      -fx-background-color: #7a919f;
+      -fx-border-color:transparent transparent transparent transparent  ;
+      /*-fx-border-width:2.0;*/
+      -fx-text-fill: #efecec;
+  }
+
+
+/*Style of each entire row in the table view when is hovered*/
+ .table-row-cell:hover {
+      -fx-background-color:#2b353b;
+      -fx-text-fill: #efecec;
+  }
+
+/*Style of each entire row in the table view when is getting focused*/
+  .table-row-cell:focused {
+      -fx-background-color:#7a919f;
+  }

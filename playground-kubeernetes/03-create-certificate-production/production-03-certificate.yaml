@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: production-ericaskari-wildcard-tls-secret
+  namespace: kube-system
+spec:
+  secretName: production-ericaskari-wildcard-tls-secret
+  secretTemplate:
+    annotations:
+      reflector.v1.k8s.emberstack.com/reflection-allowed: "true"
+      reflector.v1.k8s.emberstack.com/reflection-auto-enabled: "true"
+      reflector.v1.k8s.emberstack.com/reflection-allowed-namespaces: ""
+      reflector.v1.k8s.emberstack.com/reflection-auto-namespaces: "default,kubernetes-dashboard"
+  issuerRef:
+    name: production-letsencrypt-cluster-issuer
+    kind: ClusterIssuer
+  dnsNames:
+    - 'ericaskari.com'
+    - '*.ericaskari.com'

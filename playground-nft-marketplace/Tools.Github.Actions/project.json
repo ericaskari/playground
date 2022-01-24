@@ -1,0 +1,44 @@
+{
+  "root": "Tools.Github.Actions",
+  "sourceRoot": "Tools.Github.Actions/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:package",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "_dist/Tools.Github.Actions",
+        "tsConfig": "Tools.Github.Actions/tsconfig.lib.json",
+        "packageJson": "Tools.Github.Actions/package.json",
+        "main": "Tools.Github.Actions/src/index.ts",
+        "assets": [
+          "Tools.Github.Actions/*.md"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "Tools.Github.Actions/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/Tools.Github.Actions"
+      ],
+      "options": {
+        "jestConfig": "Tools.Github.Actions/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

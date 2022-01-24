@@ -1,0 +1,28 @@
+<div class="container">
+  <div *ngFor="let card of cards" class="card">
+    <div class="card-part header">{{ card.header }}</div>
+    <div class="card-part body">{{ card.body }}</div>
+    <div class="card-part footer">{{ card.footer }}</div>
+  </div>
+</div>
+<style>
+  .container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, 200px); /* see notes below */
+    grid-template-rows: repeat(3, auto);
+    gap: 0 1rem;
+  }
+
+  .card {
+    display: contents;
+  }
+
+  .card-part {
+    padding: 1rem;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+  }
+</style>

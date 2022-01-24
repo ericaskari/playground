@@ -1,0 +1,50 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: storage-clsss-kubegres-default
+  namespace: kubegres-default
+provisioner: kubernetes.io/no-provisioner
+volumeBindingMode: WaitForFirstConsumer
+
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-kubegres-default-backup
+  namespace: kubegres-default
+  annotations:
+    kubegres-default-backup: "true"
+spec:
+  volumeName: pv-kubegres-default-backup
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  storageClassName: storage-clsss-kubegres-default
+
+
+
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-kubegres-default-backup
+  namespace: kubegres-default
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: storage-clsss-kubegres-default
+  local:
+    path: /home/eric/db-backup
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+        - matchExpressions:
+            - key: kubernetes.io/hostname
+              operator: In
+              values:
+                - home-server

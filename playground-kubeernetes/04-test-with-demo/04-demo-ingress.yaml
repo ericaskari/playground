@@ -1,0 +1,35 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: rancher-demo
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  tls:
+  - hosts:
+      - ericaskari.com
+      - www.ericaskari.com
+    secretName: production-ericaskari-wildcard-tls-secret-mirror
+#    secretName: staging-ericaskari-wildcard-tls-secret-mirror
+  rules:
+  - host: www.ericaskari.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service: 
+            name: rancher-demo
+            port:
+              number: 80
+
+  - host: ericaskari.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: rancher-demo
+            port:
+              number: 80

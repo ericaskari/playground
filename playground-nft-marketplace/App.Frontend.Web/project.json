@@ -1,0 +1,101 @@
+{
+  "projectType": "application",
+  "root": "App.Frontend.Web",
+  "sourceRoot": "App.Frontend.Web/src",
+  "prefix": "fullstack-ericaskari",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "_dist/App.Frontend.Web",
+        "index": "App.Frontend.Web/src/index.html",
+        "main": "App.Frontend.Web/src/main.ts",
+        "polyfills": "App.Frontend.Web/src/polyfills.ts",
+        "tsConfig": "App.Frontend.Web/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "App.Frontend.Web/src/assets"
+        ],
+        "styles": [
+          "App.Frontend.Web/src/styles.scss"
+        ],
+        "scripts": [
+          "node_modules/bootstrap/dist/js/bootstrap.js"
+        ]
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "App.Frontend.Web/src/environments/environment.ts",
+              "with": "App.Frontend.Web/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "App.Frontend.Web:build:production"
+        },
+        "development": {
+          "browserTarget": "App.Frontend.Web:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "App.Frontend.Web:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "App.Frontend.Web/src/**/*.ts",
+          "App.Frontend.Web/src/**/*.html"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/App.Frontend.Web"
+      ],
+      "options": {
+        "jestConfig": "App.Frontend.Web/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

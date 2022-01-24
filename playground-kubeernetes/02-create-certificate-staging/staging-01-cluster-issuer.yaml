@@ -1,0 +1,18 @@
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: staging-letsencrypt-cluster-issuer
+  namespace: kube-system
+spec:
+  acme:
+    server: https://acme-staging-v02.api.letsencrypt.org/directory
+    email: ericaskari@gmail.com
+    privateKeySecretRef:
+      name: staging-letsencrypt-cluster-issuer
+    solvers:
+      - dns01:
+          cloudflare:
+            email: ericaskari@gmail.com
+            apiTokenSecretRef:
+              name: staging-cloudflare-api-token-secret
+              key: api-token

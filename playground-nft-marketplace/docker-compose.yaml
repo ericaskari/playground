@@ -1,0 +1,123 @@
+version: "3.8"
+
+services:
+#  web3-postgres:
+#    container_name: web3-postgres
+#    image: postgres:14.1
+#    restart: on-failure
+#    networks:
+#      - web3-network
+#    extra_hosts:
+#      - "host.docker.internal:host-gateway"
+#    volumes:
+#      - web3-postgres:/var/lib/postgresql/data
+#    env_file:
+#      - .env
+#
+#
+#  web3-pgadmin4:
+#    container_name: web3-pgadmin4
+#    image: dpage/pgadmin4:latest
+#    restart: on-failure
+#    networks:
+#      - web3-network
+#    extra_hosts:
+#      - "host.docker.internal:host-gateway"
+#    volumes:
+#      - web3-pgadmin4:/var/lib/pgadmin
+#    env_file:
+#      - .env
+#    links:
+#      - "web3-postgres:postgres-server"
+#
+#
+#  web3-minio:
+#    container_name: web3-minio
+#    image: minio/minio
+#    restart: on-failure
+#    networks:
+#      - web3-network
+#    extra_hosts:
+#      - "host.docker.internal:host-gateway"
+#    volumes:
+#      - web3-minio:/data
+#    command: "server --address 0.0.0.0:9000 /data"
+#    env_file:
+#      - .env
+#
+#
+#  web3-mailhog:
+#    container_name: web3-mailhog
+#    image: mailhog/mailhog:v1.0.1
+#    restart: on-failure
+#    networks:
+#      - web3-network
+#    extra_hosts:
+#      - "host.docker.internal:host-gateway"
+#    ports:
+#      - "1025:1025"
+#      - "8025:8025"
+
+
+  #  web3-backend:
+  #    container_name: web3-backend
+  #    build:
+  #      dockerfile: ./assets/development/Dockerfile
+  #      target: Backend
+  #      context: ./
+  #    volumes:
+  #      - source: ./App.Backend.Server/src
+  #        target: /app/App.Backend.Server/src
+  #        type: bind
+  #        read_only: true
+  #        consistency: cached
+  #    restart: on-failure
+  #    networks:
+  #      - web3-network
+  #    environment:
+  #      NODE_OPTIONS: --max_old_space_size=4096
+  #
+  #
+  #  web3-frontend:
+  #    container_name: web3-frontend
+  #    build:
+  #      dockerfile: ./assets/development/Dockerfile
+  #      target: Frontend
+  #      context: ./
+  #    volumes:
+  #      - source: ./App.Frontend.Web/src
+  #        target: /app/App.Frontend.Web/src
+  #        type: bind
+  #        read_only: true
+  #        consistency: cached
+  #    restart: on-failure
+  #    networks:
+  #      - web3-network
+  #    environment:
+  #      NODE_OPTIONS: --max_old_space_size=4096
+
+
+  web3-proxy:
+    container_name: web3-proxy
+    build:
+      dockerfile: ./assets/development/Dockerfile
+      target: Proxy
+      context: ./
+    restart: on-failure
+    networks:
+      - web3-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    ports:
+      - "80:80"
+
+
+
+#volumes:
+#  web3-postgres:
+#  web3-minio:
+#  web3-pgadmin4:
+
+networks:
+  web3-network:
+

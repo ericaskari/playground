@@ -1,0 +1,28 @@
+{
+  "projectType": "library",
+  "root": "Lib.Frontend.Web3",
+  "sourceRoot": "Lib.Frontend.Web3/src",
+  "prefix": "fullstack-ericaskari",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/Lib.Frontend.Web3"
+      ],
+      "options": {
+        "jestConfig": "Lib.Frontend.Web3/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "Lib.Frontend.Web3/src/**/*.ts",
+          "Lib.Frontend.Web3/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}
