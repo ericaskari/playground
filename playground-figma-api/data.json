@@ -1,0 +1,256 @@
+{
+    "document": {
+        "id": "0:0",
+        "name": "Document",
+        "type": "DOCUMENT",
+        "children": [
+            {
+                "id": "0:1",
+                "name": "Page 1",
+                "type": "CANVAS",
+                "children": [
+                    {
+                        "id": "4:2",
+                        "name": "HELLO",
+                        "type": "STICKY",
+                        "absoluteBoundingBox": {
+                            "x": -384,
+                            "y": -176,
+                            "width": 240,
+                            "height": 240
+                        },
+                        "constraints": {
+                            "vertical": "TOP",
+                            "horizontal": "LEFT"
+                        },
+                        "blendMode": "PASS_THROUGH",
+                        "fills": [
+                            {
+                                "blendMode": "NORMAL",
+                                "type": "SOLID",
+                                "color": {
+                                    "r": 1,
+                                    "g": 0.7411764860153198,
+                                    "b": 0.6823529601097107,
+                                    "a": 1
+                                }
+                            }
+                        ],
+                        "authorVisible": true,
+                        "effects": [
+                            {
+                                "type": "DROP_SHADOW",
+                                "visible": true,
+                                "color": {
+                                    "r": 0,
+                                    "g": 0,
+                                    "b": 0,
+                                    "a": 0.019999999552965164
+                                },
+                                "blendMode": "NORMAL",
+                                "offset": {
+                                    "x": 0,
+                                    "y": 2.5
+                                },
+                                "radius": 2,
+                                "showShadowBehindNode": true
+                            },
+                            {
+                                "type": "DROP_SHADOW",
+                                "visible": true,
+                                "color": {
+                                    "r": 0,
+                                    "g": 0,
+                                    "b": 0,
+                                    "a": 0.03999999910593033
+                                },
+                                "blendMode": "NORMAL",
+                                "offset": {
+                                    "x": 0,
+                                    "y": 3
+                                },
+                                "radius": 5,
+                                "showShadowBehindNode": true
+                            },
+                            {
+                                "type": "DROP_SHADOW",
+                                "visible": true,
+                                "color": {
+                                    "r": 0,
+                                    "g": 0,
+                                    "b": 0,
+                                    "a": 0.07999999821186066
+                                },
+                                "blendMode": "NORMAL",
+                                "offset": {
+                                    "x": 0,
+                                    "y": 8
+                                },
+                                "radius": 10,
+                                "showShadowBehindNode": true
+                            }
+                        ],
+                        "characters": "HELLO"
+                    },
+                    {
+                        "id": "4:6",
+                        "name": "Hi",
+                        "type": "STICKY",
+                        "absoluteBoundingBox": {
+                            "x": 160,
+                            "y": -176,
+                            "width": 240,
+                            "height": 240
+                        },
+                        "constraints": {
+                            "vertical": "TOP",
+                            "horizontal": "LEFT"
+                        },
+                        "blendMode": "PASS_THROUGH",
+                        "fills": [
+                            {
+                                "blendMode": "NORMAL",
+                                "type": "SOLID",
+                                "color": {
+                                    "r": 1,
+                                    "g": 0.7411764860153198,
+                                    "b": 0.6823529601097107,
+                                    "a": 1
+                                }
+                            }
+                        ],
+                        "authorVisible": true,
+                        "effects": [
+                            {
+                                "type": "DROP_SHADOW",
+                                "visible": true,
+                                "color": {
+                                    "r": 0,
+                                    "g": 0,
+                                    "b": 0,
+                                    "a": 0.019999999552965164
+                                },
+                                "blendMode": "NORMAL",
+                                "offset": {
+                                    "x": 0,
+                                    "y": 2.5
+                                },
+                                "radius": 2,
+                                "showShadowBehindNode": true
+                            },
+                            {
+                                "type": "DROP_SHADOW",
+                                "visible": true,
+                                "color": {
+                                    "r": 0,
+                                    "g": 0,
+                                    "b": 0,
+                                    "a": 0.03999999910593033
+                                },
+                                "blendMode": "NORMAL",
+                                "offset": {
+                                    "x": 0,
+                                    "y": 3
+                                },
+                                "radius": 5,
+                                "showShadowBehindNode": true
+                            },
+                            {
+                                "type": "DROP_SHADOW",
+                                "visible": true,
+                                "color": {
+                                    "r": 0,
+                                    "g": 0,
+                                    "b": 0,
+                                    "a": 0.07999999821186066
+                                },
+                                "blendMode": "NORMAL",
+                                "offset": {
+                                    "x": 0,
+                                    "y": 8
+                                },
+                                "radius": 10,
+                                "showShadowBehindNode": true
+                            }
+                        ],
+                        "characters": "Hi"
+                    },
+                    {
+                        "id": "4:14",
+                        "name": "Connector line",
+                        "type": "CONNECTOR",
+                        "absoluteBoundingBox": {
+                            "x": -140,
+                            "y": -56,
+                            "width": 296,
+                            "height": 0
+                        },
+                        "constraints": {
+                            "vertical": "TOP",
+                            "horizontal": "LEFT"
+                        },
+                        "blendMode": "PASS_THROUGH",
+                        "effects": [],
+                        "characters": "",
+                        "strokes": [
+                            {
+                                "blendMode": "NORMAL",
+                                "type": "SOLID",
+                                "color": {
+                                    "r": 0.7686274647712708,
+                                    "g": 0.7686274647712708,
+                                    "b": 0.7686274647712708,
+                                    "a": 1
+                                }
+                            }
+                        ],
+                        "strokeWeight": 3,
+                        "strokeAlign": "CENTER",
+                        "strokeJoin": "BEVEL",
+                        "connectorStart": {
+                            "endpointNodeId": "4:2",
+                            "magnet": "RIGHT"
+                        },
+                        "connectorEnd": {
+                            "endpointNodeId": "4:6",
+                            "magnet": "LEFT"
+                        },
+                        "textBackground": {
+                            "cornerRadius": 3,
+                            "rectangleCornerRadii": [
+                                0,
+                                0,
+                                0,
+                                0
+                            ],
+                            "fills": []
+                        },
+                        "connectorLineType": "ELBOWED"
+                    }
+                ],
+                "backgroundColor": {
+                    "r": 0.8980392217636108,
+                    "g": 0.8980392217636108,
+                    "b": 0.8980392217636108,
+                    "a": 1
+                },
+                "prototypeStartNodeID": null,
+                "flowStartingPoints": [],
+                "prototypeDevice": {
+                    "type": "NONE",
+                    "rotation": "NONE"
+                }
+            }
+        ]
+    },
+    "components": {},
+    "componentSets": {},
+    "schemaVersion": 0,
+    "styles": {},
+    "name": "playground-figma-figjam",
+    "lastModified": "2021-12-01T10:49:11Z",
+    "thumbnailUrl": "https://s3-alpha-sig.figma.com/thumbnails/675b3853-ea04-41e0-9bed-ed9bc1690a58?Expires=1639353600&Signature=gktD8cFVGQpsRkzL6qoSTpz83IRwpG4X-a5HMaOw6pLsUDEsprZa3G2BdaVpwwIQKQYAxAu3WQZs-i5K3r9MRHd~tXbkKTgG6NjbH22-VoVzQv05dA-4dlIX7j10eSWBbr2ciS-bxRhXBEts~JfwltdufiDbeSVe50GTxoKn9ykwgDRppAAtFtkHGZi7qNX3G5RyrZP8eO1Wq2vWkxogYRs~BMj3-j1ZZ7KLtkBh-0qILtvX8fR5xFbYSXF7FUezkzsAXZq2IxPEX8jZX3LrTON7u7VYCVc6ZD4Odegw6X0gIdRyMvN1EpAg7RmxX5qtiT8x1QhVKbb2QFeaMdYDFQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+    "version": "1342368988",
+    "role": "owner",
+    "editorType": "figjam"
+}
