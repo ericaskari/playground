@@ -1,10 +1,10 @@
-FROM nginx:1.21.4
+FROM atlassian/default-image:3
 
-#WORKDIR /app
+WORKDIR /opt/atlassian/bitbucketci/agent/build
+
 
 COPY ./entrypoint.sh /entrypoint.sh
-COPY ./main.js main.js
-COPY ./app-version.json ./assets/app-version.json
+COPY ./node-v16.13.2-linux-x64.tar.xz ./_ci/.node/node-v16.13.2-linux-x64.tar.xz
 
 RUN chmod +x /entrypoint.sh
 
