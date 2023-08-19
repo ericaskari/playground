@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    // "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "ES5",
+    "noImplicitAny": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noEmit": false,
+    "noEmitOnError": true,
+    "sourceMap": true,
+    "lib": [
+      "ES2020",
+      "ES6",
+      "DOM"
+    ]
+  }
+}

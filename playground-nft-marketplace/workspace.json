@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "projects": {
+    "App.Backend.Server": "App.Backend.Server",
+    "App.Frontend.Web": "App.Frontend.Web",
+    "Lib.Frontend.State": "Lib.Frontend.State",
+    "Lib.Frontend.Web3": "Lib.Frontend.Web3",
+    "Tools.Github.Actions": "Tools.Github.Actions",
+    "Lib.Shared.Model": "Lib.Shared.Model"
+  }
+}

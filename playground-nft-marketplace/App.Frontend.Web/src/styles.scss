@@ -1,0 +1,31 @@
+@import "./theme/mixins";
+@import "./theme/bootstrap";
+
+$header-height: 60px;
+$footer-height: 100px;
+html {
+  @include grid-layout();
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+}
+
+body {
+  @include grid-layout();
+  @include grid-take-horizontally();
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+}
+
+app-root {
+  @include grid-layout();
+  @include grid-take-horizontally();
+  margin: 0;
+  padding: 0;
+}
+
+router-outlet {
+  display: none;
+}
+

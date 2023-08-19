@@ -1,0 +1,14 @@
+{
+  "extends": "@configuration/tsconfig",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": "./src",
+    "typeRoots": [
+      "src/**/*",
+      "node_modules/@types/**/*",
+      "node_modules/@protos/**/*",
+      "node_modules/@grpc/**/*",
+      "node_modules/@protobufjs/**/*"
+    ]
+  }
+}

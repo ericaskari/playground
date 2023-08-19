@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="800.0" prefWidth="600.0" styleClass="parent" stylesheets="@../../../backuo/JAVAFX---Hospital/src/css/stylesheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="newPatientPagePackage.Newpatient">
+   <children>
+      <HBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" opacity="0.92" prefHeight="471.0" prefWidth="428.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="800.0" prefWidth="550.0">
+               <children>
+                  <JFXTextField fx:id="firstname" focusColor="#62929a" prefHeight="30.0" prefWidth="150.0" promptText="First Name" styleClass="text-field">
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#62929a" />
+                              <Stop color="#62929a" offset="0.007662835249042145" />
+                              <Stop color="#edebeb00" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="lastname" focusColor="#62929a" prefHeight="30.0" prefWidth="150.0" promptText="Last Name" styleClass="text-field">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#62929a" />
+                              <Stop color="#62929a" offset="0.007662835249042145" />
+                              <Stop color="#edebeb00" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="socialid" focusColor="#62929a" prefHeight="30.0" prefWidth="150.0" promptText="Social ID" styleClass="text-field">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#62929a" />
+                              <Stop color="#62929a" offset="0.007662835249042145" />
+                              <Stop color="#edebeb00" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                  </JFXTextField>
+                  <JFXComboBox fx:id="sex" focusColor="#62929a" prefHeight="50.0" prefWidth="300.0" promptText="Gender" styleClass="combo-box" unFocusColor="#62929a">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXComboBox>
+                  <JFXTextField fx:id="dateofbirth" focusColor="#62929a" prefHeight="30.0" prefWidth="150.0" promptText="Birthday" styleClass="text-field">
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#62929a" />
+                              <Stop color="#62929a" offset="0.007662835249042145" />
+                              <Stop color="#edebeb00" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="dateofregistration" focusColor="#62929a" prefHeight="30.0" prefWidth="150.0" promptText="Date of Registration" styleClass="text-field">
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#62929a" />
+                              <Stop color="#62929a" offset="0.007662835249042145" />
+                              <Stop color="#edebeb00" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXTextField>
+                  <JFXTextField fx:id="phonenumber" focusColor="#62929a" prefHeight="30.0" prefWidth="150.0" promptText="Phone Number" styleClass="text-field" VBox.vgrow="ALWAYS">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#62929a" />
+                              <Stop color="#62929a" offset="0.007662835249042145" />
+                              <Stop color="#edebeb00" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="city" focusColor="#62929a" prefHeight="30.0" prefWidth="150.0" promptText="City" styleClass="text-field">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#62929a" />
+                              <Stop color="#62929a" offset="0.007662835249042145" />
+                              <Stop color="#edebeb00" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="address" focusColor="#62929a" prefHeight="30.0" prefWidth="150.0" promptText="Address" styleClass="text-field">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#62929a" />
+                              <Stop color="#62929a" offset="0.007662835249042145" />
+                              <Stop color="#edebeb00" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                  </JFXTextField>
+                  <JFXTextField fx:id="postalcode" focusColor="#62929a" prefHeight="30.0" prefWidth="150.0" promptText="Postal Code" styleClass="text-field">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                     <unFocusColor>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#62929a" />
+                              <Stop color="#62929a" offset="0.007662835249042145" />
+                              <Stop color="#edebeb00" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </unFocusColor>
+                  </JFXTextField>
+                  <Text fx:id="systext" strokeType="OUTSIDE" strokeWidth="0.0" text="System:" wrappingWidth="203.21942520141602">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </Text>
+               </children>
+            </VBox>
+            <VBox alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" prefHeight="1000.0" prefWidth="303.0">
+               <children>
+                  <JFXButton fx:id="enter" buttonType="RAISED" minWidth="60.0" onAction="#enterButtonPressed" prefHeight="30.0" prefWidth="150.0" ripplerFill="BLACK" styleClass="jfx-button" text="Enter" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="20.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="cancel" buttonType="RAISED" minWidth="60.0" onAction="#cancelButtonPressed" prefHeight="30.0" prefWidth="150.0" styleClass="jfx-button" text="Cancel" textAlignment="CENTER">
+                     <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,40 @@
+{
+  "name": "@module/server",
+  "version": "1.0.0",
+  "description": "Entry module module for application",
+  "author": "Eric Askari <mohammad.askari@weare.fi>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "src/index.ts",
+  "scripts": {
+    "webpack:build:prod": "webpack --config webpack.prod.js",
+    "package:linux": "pkg dist/index.js --targets latest-linux-x64 --output dist/index",
+    "package:mac": "pkg dist/index.js --targets macos --output dist/index",
+    "package:win": "pkg dist/index.js --targets win --output dist/index",
+    "build:module:server:prod": "npm run webpack:build:prod && npm run package:linux && rm dist/index.js",
+    "start:module:server:dev": "nodemon --delay 50ms --exec ts-node ./src/index.ts --watch src"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "reflect-metadata": "^0.1.13",
+    "typedi": "^0.8.0",
+    "winston": "^3.3.3",
+    "@protos/database": "^1.0.0"
+  },
+  "devDependencies": {
+    "@configuration/eslint": "^1.0.0",
+    "@configuration/prettier": "^1.0.0",
+    "@configuration/tsconfig": "^1.0.0",
+    "@configuration/webpack": "^1.0.0",
+    "ts-node": "^9.1.0",
+    "typescript": "^4.1.2",
+    "@types/node": "^14.14.10",
+    "@types/express": "^4.17.9",
+    "clean-webpack-plugin": "^3.0.0",
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-node-externals": "^2.5.2",
+    "ts-loader": "^8.0.11",
+    "pkg": "^4.4.9"
+  }
+}

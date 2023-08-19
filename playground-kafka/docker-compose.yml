@@ -1,0 +1,57 @@
+version: '2'
+services:
+  kafka-sender:
+    #container_name: kafka-sender
+    restart: on-failure
+    depends_on:
+      kafka-server:
+        condition: service_healthy
+    deploy:
+      replicas: 4
+    build:
+      context: .
+      dockerfile: Sender.Dockerfile
+    environment:
+      KAFKA_HOST: kafka-server
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+  kafka-receiver:
+    restart: on-failure
+    deploy:
+      replicas: 4
+    depends_on:
+      kafka-server:
+        condition: service_healthy
+    build:
+      context: .
+      dockerfile: Reciever.Dockerfile
+    environment:
+      KAFKA_HOST: kafka-server
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+  kafka-server:
+    image: bitnami/kafka:latest
+    container_name: kafka-server
+    healthcheck:
+        test: [ "CMD", "kafka-topics.sh", "--list", "--bootstrap-server", "localhost:9092" ]
+        interval: 10s
+        timeout: 10s
+        retries: 2
+    expose:
+      - 9092
+      - 9093
+      - 9094
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    ports:
+      - 9092:9092
+      - 9093:9093
+      - 9094:9094
+    environment:
+      KAFKA_CFG_NODE_ID: 0
+      KAFKA_CFG_PROCESS_ROLES: controller,broker
+      KAFKA_CFG_CONTROLLER_QUORUM_VOTERS: 0@kafka-server:9093
+      KAFKA_CFG_LISTENERS: PLAINTEXT://0.0.0.0:9092,CONTROLLER://0.0.0.0:9093,EXTERNAL://0.0.0.0:9094
+      KAFKA_CFG_ADVERTISED_LISTENERS: PLAINTEXT://kafka-server:9092,EXTERNAL://kafka-server:9094
+      KAFKA_CFG_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,EXTERNAL:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_CFG_CONTROLLER_LISTENER_NAMES: CONTROLLER

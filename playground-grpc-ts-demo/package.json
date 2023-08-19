@@ -1,0 +1,30 @@
+{
+    "name": "grpc-ts-demo",
+    "version": "1.0.0",
+    "author": "Mike Christensen",
+    "license": "MIT",
+    "dependencies": {
+        "@types/inquirer": "^6.5.0",
+        "@types/lowdb": "^1.0.9",
+        "@types/yargs": "^15.0.3",
+        "@typescript-eslint/eslint-plugin": "^2.19.0",
+        "@typescript-eslint/parser": "^2.19.0",
+        "cli-table": "^0.3.1",
+        "eslint": "^6.8.0",
+        "grpc": "^1.24.2",
+        "grpc-tools": "^1.8.1",
+        "grpc_tools_node_protoc_ts": "^2.5.10",
+        "inquirer": "^7.0.4",
+        "lodash": "^4.17.15",
+        "lowdb": "^1.0.0",
+        "typescript": "^3.7.5",
+        "yargs": "^15.1.0"
+    },
+    "scripts": {
+        "lint": "yarn run eslint --fix --ext .ts src",
+        "prebuild": "yarn run lint",
+        "clean": "rm -rf ./src/proto && mkdir -p ./src/proto && rm -f chat-*.txt && rm -f db.json",
+        "build": "sh ./scripts/build-protos.sh ./songs.proto ./src/proto && yarn run tsc",
+        "start": "PORT=6789 node ./dist/index.js"
+    }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@protos/database",
+  "version": "1.0.0",
+  "description": "Database module for application",
+  "author": "Eric Askari <mohammad.askari@weare.fi>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build:proto:module:cook": "cook database",
+    "build:proto:module:publish": "tsc && cp -rf ./src/types/* ./dist/types/"
+  },
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.5"
+  },
+  "devDependencies": {
+    "@configuration/eslint": "^1.0.0",
+    "@configuration/prettier": "^1.0.0",
+    "@configuration/tsconfig": "^1.0.0",
+    "@grpc/grpc-js": "^1.2.2",
+    "@protos/builder": "^1.0.0",
+    "@types/google-protobuf": "^3.7.4",
+    "google-protobuf": "^3.14.0"
+  }
+}

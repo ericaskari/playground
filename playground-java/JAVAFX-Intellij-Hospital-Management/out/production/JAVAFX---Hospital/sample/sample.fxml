@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="600.0" minWidth="800.0" pickOnBounds="false" prefHeight="768.0" prefWidth="1366.0" stylesheets="@../css/stylesheet.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <SplitPane dividerPositions="0.16348973607038123" prefHeight="160.0" prefWidth="200.0" styleClass="background" stylesheets="@../css/stylesheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxWidth="220.0" minHeight="0.0" minWidth="220.0" prefHeight="766.0" prefWidth="220.0">
+               <children>
+                  <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minWidth="100.0" prefHeight="768.0" prefWidth="210.0" styleClass="sidebar" stylesheets="@../css/stylesheet.css" AnchorPane.bottomAnchor="-0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXButton fx:id="b1" onAction="#newPatientButtonPressed" prefHeight="40.0" prefWidth="210.0" ripplerFill="BLACK" styleClass="jfx-button" stylesheets="@../css/stylesheet.css" text="Add patient" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Segoe UI Light" size="15.0" />
+                           </font>
+                           </JFXButton>
+                        <JFXButton fx:id="b2" onAction="#deleteExistedPatient" prefHeight="40.0" prefWidth="210.0" ripplerFill="BLACK" styleClass="jfx-button" stylesheets="@../css/stylesheet.css" text="Delete Patient" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Segoe UI Light" size="15.0" />
+                           </font>
+                           </JFXButton>
+                        <JFXButton fx:id="b3" onAction="#exitButtonPressed" prefHeight="40.0" prefWidth="210.0" ripplerFill="BLACK" styleClass="jfx-button" stylesheets="@../css/stylesheet.css" text="Exit" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Segoe UI Light" size="15.0" />
+                           </font>
+                           </JFXButton>
+                        <JFXButton fx:id="b4" onAction="#getDatafromDatabase" prefHeight="40.0" prefWidth="210.0" ripplerFill="BLACK" styleClass="jfx-button" stylesheets="@../css/stylesheet.css" text="Load from Database" textFill="WHITE">
+                           <font>
+                              <Font name="Segoe UI Light" size="15.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TableView fx:id="mytable" depthTest="DISABLE" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" pickOnBounds="false" prefHeight="768.0" stylesheets="@../css/stylesheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                        <TableColumn fx:id="lastname" editable="false" prefWidth="139.99999976158142" text="Last Name" />
+                        <TableColumn fx:id="firstname" minWidth="0.0" prefWidth="125.99993896484375" text="First Name" />
+                        <TableColumn fx:id="socialid" prefWidth="52.666717529296875" text="Social ID" />
+                        <TableColumn fx:id="sex" prefWidth="46.0" text="Sex" />
+                        <TableColumn fx:id="birthday" prefWidth="114.0" text="Birthday" />
+                        <TableColumn fx:id="dateofregistration" prefWidth="128.00009155273438" text="Date of Registration" />
+                        <TableColumn fx:id="phonenumber" prefWidth="123.333251953125" text="Phone Number" />
+                        <TableColumn fx:id="city" prefWidth="91.9998779296875" text="City" />
+                        <TableColumn fx:id="address" prefWidth="308.66680908203125" text="Address" />
+                    </columns>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

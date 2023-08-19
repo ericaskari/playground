@@ -1,0 +1,46 @@
+@import "../../../theme/mixins";
+
+:host {
+  @include grid-layout();
+  @include grid-take-horizontally();
+}
+
+header {
+  @include grid-take-horizontally();
+}
+
+section {
+  @include grid-take-horizontally();
+}
+
+footer {
+  @include grid-take-horizontally();
+}
+
+.full-height-snap {
+  background-color: rgba(255, 255, 255, 0);
+  background-blend-mode: difference;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.view-1 {
+  background-color: rgba(255, 255, 255, 0);
+  background-blend-mode: difference;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.view-2 {
+}
+
+.view-3 {
+  background-color: rgba(255, 255, 255, 0);
+  background-blend-mode: difference;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}

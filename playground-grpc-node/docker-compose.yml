@@ -1,0 +1,41 @@
+version: '3.1'
+
+services:
+  microservice-1:
+    build: microservices/microservice-1
+    container_name: microservice-1
+    restart: "no"
+    environment:
+      USE_SSL: "false"
+      SERVER_ADDRESS: "0.0.0.0"
+      FRONTEND_ADDRESS: "http://localhost:8443"
+      PORT: "8000"
+      PRODUCTION: "false"
+    volumes:
+      - ./microservices/microservice-1/src:/usr/src/app/src:ro
+  microservice-2:
+    build: ./microservices/microservice-2
+    container_name: microservice-2
+    restart: "no"
+    environment:
+      USE_SSL: "false"
+      SERVER_ADDRESS: "0.0.0.0"
+      FRONTEND_ADDRESS: "http://localhost:8443"
+      PORT: "8000"
+      PRODUCTION: "false"
+    volumes:
+      - ./microservices/microservice-2/src:/usr/src/app/src:ro
+  microservice-entry:
+    build: ./microservices/microservice-entry
+    container_name: microservice-entry
+    restart: "no"
+    ports:
+      - 8000:8000
+    environment:
+      USE_SSL: "false"
+      SERVER_ADDRESS: "0.0.0.0"
+      FRONTEND_ADDRESS: "http://localhost:8443"
+      PORT: "8000"
+      PRODUCTION: "false"
+    volumes:
+      - ./microservices/microservice-entry/src:/usr/src/app/src:ro

@@ -1,0 +1,28 @@
+{
+  "projectType": "library",
+  "root": "Lib.Frontend.State",
+  "sourceRoot": "Lib.Frontend.State/src",
+  "prefix": "fullstack-ericaskari",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/Lib.Frontend.State"
+      ],
+      "options": {
+        "jestConfig": "Lib.Frontend.State/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "Lib.Frontend.State/src/**/*.ts",
+          "Lib.Frontend.State/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

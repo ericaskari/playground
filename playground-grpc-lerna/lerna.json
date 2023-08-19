@@ -1,0 +1,9 @@
+{
+  "packages": [
+    "modules/*",
+    "configurations/*",
+    "protos/*",
+    "server/*"
+  ],
+  "version": "independent"
+}

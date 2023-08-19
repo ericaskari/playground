@@ -1,0 +1,11 @@
+{
+  "extends": "@configuration/tsconfig",
+  "compilerOptions": {
+    "target": "ES5",
+    "outDir": "./bin",
+    "baseUrl": "./src",
+    "typeRoots": [
+      "node_modules/@types"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+/* import the necessary Bootstrap files */
+@import "~bootstrap/scss/functions";
+
+//  The !default attribute is reverse of !important. It will take the value of previously declared variable
+//  make changes to the !default Bootstrap variables
+$primary: #717837;
+$secondary: #963539;
+$font-family-sans-serif: 'Lato', sans-serif;
+
+:root {
+  --davys-Grey: #515151;
+
+}
+
+@import "~bootstrap/scss/variables";
+
+/* finally, import Bootstrap to set the changes! */
+@import "~bootstrap/scss/bootstrap";

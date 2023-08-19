@@ -1,0 +1,19 @@
+{
+  "name": "@configuration/prettier",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "Eric Askari <mohammad.askari@weare.fi>",
+  "homepage": "",
+  "license": "ISC",
+  "main": ".prettierrc.js",
+  "scripts": {},
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.2.2",
+    "@grpc/proto-loader": "^0.5.5",
+    "@types/shelljs": "^0.8.8",
+    "shelljs": "^0.8.4"
+  }
+}

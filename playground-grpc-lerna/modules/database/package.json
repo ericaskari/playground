@@ -1,0 +1,41 @@
+{
+  "name": "@module/database",
+  "version": "1.0.0",
+  "description": "Database module for application",
+  "author": "Eric Askari <mohammad.askari@weare.fi>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "src/index.ts",
+  "scripts": {
+    "webpack:build:prod": "webpack --config webpack.prod.js",
+    "package:linux": "pkg dist/index.js --targets latest-linux-x64 --output dist/index",
+    "package:mac": "pkg dist/index.js --targets macos --output dist/index",
+    "package:win": "pkg dist/index.js --targets win --output dist/index",
+    "build:module:database:prod": "npm run webpack:build:prod && npm run package:linux && rm dist/index.js",
+    "start:module:database:dev": "nodemon --delay 50ms --exec ts-node ./src/index.ts --watch src"
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.2.2",
+    "@grpc/proto-loader": "^0.5.5",
+    "typedi": "^0.8.0",
+    "reflect-metadata": "^0.1.13"
+  },
+  "devDependencies": {
+    "@configuration/eslint": "^1.0.0",
+    "@configuration/prettier": "^1.0.0",
+    "@configuration/tsconfig": "^1.0.0",
+    "@configuration/webpack": "^1.0.0",
+    "@grpc/grpc-js": "^1.2.2",
+    "@protos/database": "^1.0.0",
+    "@types/google-protobuf": "^3.7.4",
+    "google-protobuf": "^3.14.0-rc.1",
+    "ts-node": "^9.1.0",
+    "typescript": "^4.1.2",
+    "clean-webpack-plugin": "^3.0.0",
+    "webpack": "^5.10.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-node-externals": "^2.5.2",
+    "ts-loader": "^8.0.11",
+    "pkg": "^4.4.9"
+  }
+}

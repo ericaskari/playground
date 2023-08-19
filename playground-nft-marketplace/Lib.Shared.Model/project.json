@@ -1,0 +1,28 @@
+{
+  "projectType": "library",
+  "root": "Lib.Shared.Model",
+  "sourceRoot": "Lib.Shared.Model/src",
+  "prefix": "fullstack-ericaskari",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/Lib.Shared.Model"
+      ],
+      "options": {
+        "jestConfig": "Lib.Shared.Model/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "Lib.Shared.Model/src/**/*.ts",
+          "Lib.Shared.Model/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

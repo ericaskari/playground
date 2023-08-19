@@ -1,0 +1,19 @@
+.button {
+    -fx-background-color: #ffdfd3;
+    -fx-text-fill: #efecec;
+    -fx-background-radius: 25;
+}
+.button:hover {
+    -fx-background-color: #363434;
+}
+
+.jfx-button {
+    -fx-background-color: #87e0ff;
+    -fx-text-fill: #1d97c1;
+    -fx-background-radius: 0;
+    -fx-border-color:transparent transparent transparent transparent  ;
+    -fx-border-width:5.0;
+}
+.jfx-button:hover {
+    -fx-background-color: #53c7f0;
+}
